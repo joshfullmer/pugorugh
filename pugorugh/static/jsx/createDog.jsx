@@ -44,7 +44,6 @@ class createDog extends React.Component {
     }
   
     handleSubmit(event) {
-        console.log(this.state.file['name'])
         var json = JSON.stringify({
             name: this.state.dogname,
             image_filename: this.state.file['name'],
@@ -76,8 +75,6 @@ class createDog extends React.Component {
             processData: false,
             contentType: false,
             headers: TokenAuth.getAuthHeader(),
-        }).done(function() {
-            alert("File Uploaded")
         });
     }
 

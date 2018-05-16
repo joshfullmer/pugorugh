@@ -68,7 +68,6 @@ var createDog = function (_React$Component) {
     }, {
         key: "handleSubmit",
         value: function handleSubmit(event) {
-            console.log(this.state.file['name']);
             var json = JSON.stringify({
                 name: this.state.dogname,
                 image_filename: this.state.file['name'],
@@ -101,8 +100,6 @@ var createDog = function (_React$Component) {
                 processData: false,
                 contentType: false,
                 headers: TokenAuth.getAuthHeader()
-            }).done(function () {
-                alert("File Uploaded");
             });
         }
     }, {
